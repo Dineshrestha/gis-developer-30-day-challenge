@@ -52,3 +52,5 @@ credentials.*
 scratch/
 temp/
 tmp/
+day-01-excel-gis-update/data/sample/incoming_updates.xlsx
+day-01-excel-gis-update/data/sample/infrastructure_assets.geojson
