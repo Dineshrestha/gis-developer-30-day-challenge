@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+.env
+.env.*
+secrets.*
+credentials.*
+*.key
+*.pem
+
+# GIS generated / local data
+*.gdb/
+*.sde
+*.lock
+*.sr.lock
+*.aux.xml
+*.ovr
+*.rrd
+
+# Common large spatial data — add public samples selectively if needed
+*.tif
+*.tiff
+*.img
+*.jp2
+*.las
+*.laz
+
+# Outputs
+**/output/*
+!**/output/.gitkeep
+
+# Local scratch/work directories
+scratch/
+temp/
+tmp/
