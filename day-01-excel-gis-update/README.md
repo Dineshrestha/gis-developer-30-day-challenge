@@ -2,7 +2,7 @@
 
 ## Status
 
-⬜ Not started
+🚧 In progress
 
 ## Problem
 
@@ -48,7 +48,19 @@ day-01-excel-gis-update/
 
 ## Data
 
-Use only public or synthetic data. The sample dataset will be created as part of the tutorial so the project is reproducible and safe to publish.
+Use only public or synthetic data. The sample dataset is generated from code so the project is reproducible and safe to publish.
+
+The repository stores the GIS sample as GeoJSON because it is lightweight and portable. In ArcGIS Pro, convert the GeoJSON to a local feature class before editing or inspection if Add Data does not accept the file directly.
+
+### ArcGIS Pro preparation
+
+Use **JSON To Features**:
+
+- Input JSON or GeoJSON: `data/sample/infrastructure_assets.geojson`
+- Output feature class: a local file geodatabase feature class such as `infrastructure_assets`
+- Geometry type: `POINT`
+
+This preserves a portable source file in GitHub while using a native geodatabase feature class for ArcPy updates.
 
 ## Acceptance Criteria
 
