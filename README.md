@@ -22,38 +22,40 @@ Every exercise follows the same general pattern:
 
 ## Progress
 
+**Status key:** 🟢 Complete · 🟡 In progress · ⚪ Planned
+
 | Day | Project | Primary Skills | Status |
 |---:|---|---|:---:|
-| 01 | Excel → GIS Update Automation | Python, ArcPy, pandas, validation | ⬜ |
-| 02 | Production-Quality Python GIS Tool | Python structure, config, logging | ⬜ |
-| 03 | Rule-Based GIS QA/QC Engine | Python, GIS validation | ⬜ |
-| 04 | GIS Code Testing | pytest, test data, assertions | ⬜ |
-| 05 | Batch GIS ETL / Standardization | ArcPy, ETL, schemas | ⬜ |
-| 06 | Change Detection | pandas, GeoPandas, geometry comparison | ⬜ |
-| 07 | Automation ROI | benchmarking, reporting | ⬜ |
-| 08 | PostgreSQL / PostGIS | spatial database design | ⬜ |
-| 09 | Spatial SQL & Performance | PostGIS, indexes, query tuning | ⬜ |
-| 10 | Data Reconciliation | authoritative-source rules | ⬜ |
-| 11 | ArcGIS REST API | REST, JSON, pagination | ⬜ |
-| 12 | ArcGIS API for Python | Portal, feature layers, publishing | ⬜ |
-| 13 | ArcGIS Services | Feature/Map/GP services | ⬜ |
-| 14 | Enterprise GIS Architecture | Portal, Server, databases, security | ⬜ |
-| 15 | JavaScript / TypeScript for GIS | TS, async/await, modules | ⬜ |
-| 16 | Modern Web Tooling | Node.js, npm, Vite | ⬜ |
-| 17 | React Fundamentals | components, state, hooks | ⬜ |
-| 18 | React + ArcGIS Maps SDK | web mapping | ⬜ |
-| 19 | GIS Web Application | filters, selection, statistics | ⬜ |
-| 20 | Authentication & Secure APIs | OAuth, tokens, RBAC | ⬜ |
-| 21 | Experience Builder Development | custom widget concepts | ⬜ |
-| 22 | GIS Backend API | FastAPI, spatial backend | ⬜ |
-| 23 | Full-Stack Geospatial Workflow | React, FastAPI, PostGIS | ⬜ |
-| 24 | Docker | containers, environment variables | ⬜ |
-| 25 | CI/CD | GitHub Actions, automated tests | ⬜ |
-| 26 | Cloud GIS Architecture | AWS/Azure concepts | ⬜ |
-| 27 | Security, Testing & Performance | integration/UAT/performance | ⬜ |
-| 28 | GIS Engineering Experiment | raster methodology, validation | ⬜ |
-| 29 | GIS System Design | requirements, architecture, Agile | ⬜ |
-| 30 | Full-Stack Geospatial Capstone | end-to-end integration | ⬜ |
+| 01 | Client Field Data Validation & GIS Reconciliation | Python, ArcPy, pandas, QA/QC, Excel dashboard | 🟡 |
+| 02 | Production-Quality Python GIS Tool | Python structure, config, logging | ⚪ |
+| 03 | Rule-Based GIS QA/QC Engine | Python, GIS validation | ⚪ |
+| 04 | GIS Code Testing | pytest, test data, assertions | ⚪ |
+| 05 | Batch GIS ETL / Standardization | ArcPy, ETL, schemas | ⚪ |
+| 06 | Change Detection | pandas, GeoPandas, geometry comparison | ⚪ |
+| 07 | Automation ROI | benchmarking, reporting | ⚪ |
+| 08 | PostgreSQL / PostGIS | spatial database design | ⚪ |
+| 09 | Spatial SQL & Performance | PostGIS, indexes, query tuning | ⚪ |
+| 10 | Data Reconciliation | authoritative-source rules | ⚪ |
+| 11 | ArcGIS REST API | REST, JSON, pagination | ⚪ |
+| 12 | ArcGIS API for Python | Portal, feature layers, publishing | ⚪ |
+| 13 | ArcGIS Services | Feature/Map/GP services | ⚪ |
+| 14 | Enterprise GIS Architecture | Portal, Server, databases, security | ⚪ |
+| 15 | JavaScript / TypeScript for GIS | TS, async/await, modules | ⚪ |
+| 16 | Modern Web Tooling | Node.js, npm, Vite | ⚪ |
+| 17 | React Fundamentals | components, state, hooks | ⚪ |
+| 18 | React + ArcGIS Maps SDK | web mapping | ⚪ |
+| 19 | GIS Web Application | filters, selection, statistics | ⚪ |
+| 20 | Authentication & Secure APIs | OAuth, tokens, RBAC | ⚪ |
+| 21 | Experience Builder Development | custom widget concepts | ⚪ |
+| 22 | GIS Backend API | FastAPI, spatial backend | ⚪ |
+| 23 | Full-Stack Geospatial Workflow | React, FastAPI, PostGIS | ⚪ |
+| 24 | Docker | containers, environment variables | ⚪ |
+| 25 | CI/CD | GitHub Actions, automated tests | ⚪ |
+| 26 | Cloud GIS Architecture | AWS/Azure concepts | ⚪ |
+| 27 | Security, Testing & Performance | integration/UAT/performance | ⚪ |
+| 28 | GIS Engineering Experiment | raster methodology, validation | ⚪ |
+| 29 | GIS System Design | requirements, architecture, Agile | ⚪ |
+| 30 | Full-Stack Geospatial Capstone | end-to-end integration | ⚪ |
 
 ## Daily Structure
 
@@ -86,7 +88,8 @@ gis-developer-30-day-lab/
 │   └── pull_request_template.md
 ├── day-01-excel-gis-update/
 │   ├── README.md
-│   ├── notebook.ipynb
+│   ├── Day01_Excel_to_GIS_Update_Automation.ipynb
+│   ├── config/
 │   ├── src/
 │   ├── data/sample/
 │   ├── output/
