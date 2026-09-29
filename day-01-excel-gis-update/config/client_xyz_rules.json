@@ -1,0 +1,49 @@
+{
+  "client_name": "XYZ",
+  "delivery_sheet": "Field_Delivery",
+  "id_field": "asset_id",
+  "id_pattern": "^AST-\\d{4}$",
+  "required_columns": [
+    "client_record_id",
+    "asset_id",
+    "status_new",
+    "priority_new",
+    "inspector_new",
+    "inspection_date",
+    "condition_score_new",
+    "pressure_psi_new",
+    "comments"
+  ],
+  "allowed_values": {
+    "status_new": [
+      "Active",
+      "Inactive",
+      "Maintenance"
+    ],
+    "priority_new": [
+      "Low",
+      "Medium",
+      "High"
+    ]
+  },
+  "numeric_ranges": {
+    "condition_score_new": [
+      0,
+      100
+    ],
+    "pressure_psi_new": [
+      20,
+      150
+    ]
+  },
+  "field_mapping": {
+    "status_new": "status",
+    "priority_new": "priority",
+    "inspector_new": "inspector",
+    "inspection_date": "last_inspection",
+    "condition_score_new": "condition_score",
+    "pressure_psi_new": "pressure_psi"
+  },
+  "blank_values_preserve_existing": true,
+  "reject_stale_inspection_dates": true
+}
