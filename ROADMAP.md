@@ -91,8 +91,30 @@ Map a web GIS architecture to core AWS/Azure services and understand deployment 
 ### Day 27 — Security, Testing & Performance
 Practice unit, integration, API, UAT, and performance testing plus secure configuration and accessibility concepts.
 
-### Day 28 — GIS Engineering Experiment
-Formalize a real spatial methodology question into hypotheses, automated scenarios, measurable validation, and a recommendation.
+### Day 28 — Advanced Lab: B2H Cultural Site Batch Viewshed & Visibility Automation
+Turn a proven single-site viewshed workflow into one production-scale batch geoprocessing system for approximately 90 cultural sites containing point, line, and polygon geometries.
+
+This advanced lab remains **one challenge slot**, even though it is intentionally larger than the standard one-hour exercise. The public portfolio version must reproduce the engineering methodology with public or synthetic substitutes rather than proprietary project data.
+
+The lab will cover the complete system as one integrated workflow:
+
+- reproduce the single-site prototype with a 6-ft observer, terrain viewshed, 5-mile structure search, visibility interpretation, QA, and report generation;
+- scale from one observer/site to approximately 90 mixed-geometry sites;
+- implement the client-approved **Any Location** rule: a structure is potentially visible when it is visible from at least one observer generated from the full site geometry;
+- use a single observer for point sites and multiple observers for line/polygon sites instead of relying on a midpoint or centroid, because one representative location can miss visibility from other portions of a site and understate potential visibility;
+- evaluate 10 m versus 30 m DEM resolution, including the accuracy/runtime/storage tradeoff that led to the production-scale 30 m approach;
+- acquire DEM coverage for buffered analysis extents, manage multiple source tiles, mosaic them into a continuous analysis surface, and verify coverage before processing;
+- use a final 500 m observer spacing for line/polygon sites to balance spatial coverage with practical runtime;
+- batch the workflow with ArcPy so each site's observers, 5-mile analysis extent, terrain visibility, and potentially visible Rev2d structures are processed consistently;
+- package the workflow as a user-friendly Python Toolbox with clear parameters, sensible defaults, progress messages, and reusable configuration;
+- make per-site viewshed-raster export optional so users can preserve diagnostic rasters when needed without forcing large raster outputs for every site;
+- generate an automated Excel deliverable containing site-level summaries, visible-structure lists, counts, QA/status information, and batch-run results;
+- implement preflight and post-run QA for site IDs, geometry types, projected coordinate system, DEM resolution/coverage, observer generation, structure IDs/heights, duplicate records, failed sites, missing outputs, and processing completeness;
+- benchmark the automated system against the original manual workflow.
+
+**Efficiency case study:** the original single-point workflow took about 3 hours. Even if all 90 sites had been simple points, manual production would have required about 270 labor-hours; because line and polygon sites require more observers and processing, the realistic manual estimate is **greater than 270 hours**. The automated production workflow was completed by a two-person team in roughly 8 hours each, or about **16 labor-hours**. Against the conservative 270-hour baseline, that represents at least **254 labor-hours avoided**, approximately **94.1% labor reduction**, and roughly **16.9× greater throughput**. The actual gain is larger when the additional manual complexity of line and polygon sites is considered.
+
+The advanced lab deliverables will include reusable ArcPy modules, a Python Toolbox, configuration, QA/logging, automated Excel reporting, optional raster outputs, benchmark documentation, and a concise architecture/workflow diagram.
 
 ### Day 29 — GIS System Design & Requirements
 Turn an ambiguous business request into requirements, user stories, acceptance criteria, architecture, API contracts, database design, testing strategy, and sprint work.
