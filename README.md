@@ -51,7 +51,7 @@ Every exercise follows the same general pattern:
 | 25 | CI/CD | GitHub Actions, automated tests | ⬜ |
 | 26 | Cloud GIS Architecture | AWS/Azure concepts | ⬜ |
 | 27 | Security, Testing & Performance | integration/UAT/performance | ⬜ |
-| 28 | GIS Engineering Experiment | raster methodology, validation | ⬜ |
+| 28 | **Advanced Lab — B2H Cultural Site Batch Viewshed & Visibility Automation** | ArcPy, raster analysis, batch architecture, Python Toolbox, Excel reporting, performance engineering | ⬜ |
 | 29 | GIS System Design | requirements, architecture, Agile | ⬜ |
 | 30 | Full-Stack Geospatial Capstone | end-to-end integration | ⬜ |
 
