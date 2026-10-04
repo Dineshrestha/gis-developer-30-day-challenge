@@ -51,9 +51,17 @@ Every exercise follows the same general pattern:
 | 25 | CI/CD | GitHub Actions, automated tests | ⬜ |
 | 26 | Cloud GIS Architecture | AWS/Azure concepts | ⬜ |
 | 27 | Security, Testing & Performance | integration/UAT/performance | ⬜ |
-| 28 | **Advanced Lab — B2H Cultural Site Batch Viewshed & Visibility Automation** | ArcPy, raster analysis, batch architecture, Python Toolbox, Excel reporting, performance engineering | ⬜ |
+| 28 | GIS Engineering Experiment | raster methodology, scenario testing, measurable validation | ⬜ |
 | 29 | GIS System Design | requirements, architecture, Agile | ⬜ |
 | 30 | Full-Stack Geospatial Capstone | end-to-end integration | ⬜ |
+
+## Advanced Portfolio Lab
+
+The 30 numbered days remain intact. In addition, the challenge includes one larger real-world portfolio lab:
+
+**B2H Cultural Site Batch Viewshed & Visibility Automation** — scale a validated single-site viewshed into a production batch workflow for ~90 point, line, and polygon sites using multiple observers, 10 m vs. 30 m DEM evaluation, buffered DEM mosaics, 500 m final observer spacing, ArcPy automation, a Python Toolbox, optional raster outputs, automated Excel reporting, QA, and performance benchmarking.
+
+See: `advanced-labs/b2h-batch-viewshed/README.md`
 
 ## Daily Structure
 
@@ -80,7 +88,7 @@ Each tutorial is designed for approximately **1 hour**:
 ## Repository Structure
 
 ```text
-gis-developer-30-day-lab/
+gis-developer-30-day-challenge/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   └── pull_request_template.md
@@ -91,6 +99,9 @@ gis-developer-30-day-lab/
 │   ├── data/sample/
 │   ├── output/
 │   └── screenshots/
+├── advanced-labs/
+│   └── b2h-batch-viewshed/
+│       └── README.md
 ├── docs/
 ├── assets/
 ├── README.md
