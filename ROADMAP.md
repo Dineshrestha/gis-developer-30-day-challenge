@@ -91,33 +91,46 @@ Map a web GIS architecture to core AWS/Azure services and understand deployment 
 ### Day 27 — Security, Testing & Performance
 Practice unit, integration, API, UAT, and performance testing plus secure configuration and accessibility concepts.
 
-### Day 28 — Advanced Lab: B2H Cultural Site Batch Viewshed & Visibility Automation
-Turn a proven single-site viewshed workflow into one production-scale batch geoprocessing system for approximately 90 cultural sites containing point, line, and polygon geometries.
+### Day 28 — GIS Engineering Experiment
+Formalize a real spatial methodology question into hypotheses, automated scenarios, measurable validation, and a defensible recommendation.
 
-This advanced lab remains **one challenge slot**, even though it is intentionally larger than the standard one-hour exercise. The public portfolio version must reproduce the engineering methodology with public or synthetic substitutes rather than proprietary project data.
+This lab is about **methodology engineering**, not merely running geoprocessing tools. The workflow should follow:
 
-The lab will cover the complete system as one integrated workflow:
+**Question → Hypothesis → Scenarios → Automated Testing → Quantitative/Visual Validation → Recommendation**
 
-- reproduce the single-site prototype with a 6-ft observer, terrain viewshed, 5-mile structure search, visibility interpretation, QA, and report generation;
-- scale from one observer/site to approximately 90 mixed-geometry sites;
-- implement the client-approved **Any Location** rule: a structure is potentially visible when it is visible from at least one observer generated from the full site geometry;
-- use a single observer for point sites and multiple observers for line/polygon sites instead of relying on a midpoint or centroid, because one representative location can miss visibility from other portions of a site and understate potential visibility;
-- evaluate 10 m versus 30 m DEM resolution, including the accuracy/runtime/storage tradeoff that led to the production-scale 30 m approach;
-- acquire DEM coverage for buffered analysis extents, manage multiple source tiles, mosaic them into a continuous analysis surface, and verify coverage before processing;
-- use a final 500 m observer spacing for line/polygon sites to balance spatial coverage with practical runtime;
-- batch the workflow with ArcPy so each site's observers, 5-mile analysis extent, terrain visibility, and potentially visible Rev2d structures are processed consistently;
-- package the workflow as a user-friendly Python Toolbox with clear parameters, sensible defaults, progress messages, and reusable configuration;
-- make per-site viewshed-raster export optional so users can preserve diagnostic rasters when needed without forcing large raster outputs for every site;
-- generate an automated Excel deliverable containing site-level summaries, visible-structure lists, counts, QA/status information, and batch-run results;
-- implement preflight and post-run QA for site IDs, geometry types, projected coordinate system, DEM resolution/coverage, observer generation, structure IDs/heights, duplicate records, failed sites, missing outputs, and processing completeness;
-- benchmark the automated system against the original manual workflow.
+A representative exercise is the agricultural-mask / tree-canopy boundary problem: compare alternatives such as baseline geometry, inward-buffer scenarios, raster-cell shrink, or other boundary refinements; measure the impact on tree canopy and other land-cover classes; inspect geometry/edge behavior; document tradeoffs; and select a method based on evidence rather than preference.
 
-**Efficiency case study:** the original single-point workflow took about 3 hours. Even if all 90 sites had been simple points, manual production would have required about 270 labor-hours; because line and polygon sites require more observers and processing, the realistic manual estimate is **greater than 270 hours**. The automated production workflow was completed by a two-person team in roughly 8 hours each, or about **16 labor-hours**. Against the conservative 270-hour baseline, that represents at least **254 labor-hours avoided**, approximately **94.1% labor reduction**, and roughly **16.9× greater throughput**. The actual gain is larger when the additional manual complexity of line and polygon sites is considered.
-
-The advanced lab deliverables will include reusable ArcPy modules, a Python Toolbox, configuration, QA/logging, automated Excel reporting, optional raster outputs, benchmark documentation, and a concise architecture/workflow diagram.
+Core skills include experimental design, scenario automation, sensitivity analysis, raster/vector comparison, metric design, visual QA, reproducibility, and technical decision documentation.
 
 ### Day 29 — GIS System Design & Requirements
 Turn an ambiguous business request into requirements, user stories, acceptance criteria, architecture, API contracts, database design, testing strategy, and sprint work.
 
 ### Day 30 — Full-Stack Geospatial Capstone
 Build and document an end-to-end geospatial application combining ingestion, QA/QC, spatial processing, database, API, web mapping, testing, CI/CD, and architecture documentation.
+
+## Advanced Portfolio Lab — B2H Cultural Site Batch Viewshed & Visibility Automation
+
+This is **one advanced lab outside the 30 numbered days**. It does not replace Day 28 or expand into multiple challenge days.
+
+Turn a proven single-site viewshed workflow into one production-scale batch geoprocessing system for approximately 90 cultural sites containing point, line, and polygon geometries.
+
+The integrated lab covers:
+
+- the original single-site workflow with a 6-ft observer, terrain viewshed, 5-mile structure search, QA, and visibility reporting;
+- scaling to ~90 mixed-geometry sites;
+- the client-approved **Any Location** methodology, with multiple observers for line/polygon features instead of midpoint/centroid-only representation;
+- 10 m versus 30 m DEM development and the accuracy/runtime/storage tradeoff;
+- buffered DEM acquisition, tile management, mosaicking, and coverage QA;
+- final 500 m observer spacing for line/polygon sites;
+- ArcPy batch processing and site-level error handling;
+- a reusable Python Toolbox with sensible defaults and clear parameters;
+- optional per-site viewshed-raster retention;
+- automated Excel visibility reporting;
+- preflight and post-run QA;
+- performance benchmarking and documentation.
+
+**Efficiency case study:** the original single-point workflow took about 3 hours. Ninety simple point sites would therefore require about 270 labor-hours, while the real mixed-geometry scope would exceed that. The automated production workflow required roughly 16 labor-hours total across two people, avoiding at least 254 labor-hours, reducing labor by approximately 94.1%, and yielding roughly 16.9× the conservative manual throughput.
+
+The public portfolio implementation must use public/synthetic replacement data and must not expose proprietary B2H datasets, internal paths, client identifiers, or restricted outputs.
+
+Full advanced-lab specification: `advanced-labs/b2h-batch-viewshed/README.md`
